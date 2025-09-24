@@ -1,0 +1,26 @@
+:root{
+    --primaryColor:red;
+}
+section p{
+    color:var(--primaryColor);
+}
+.bx+p{
+
+    color:blue; 
+
+}
+input[type='text'] {
+    background-color: red;
+}
+input[type='email']:focus {
+    color: red;
+}
+img[alt='image']{
+    height: 100px;
+}
+.bx+p::after{
+    content: 'Hello';
+    color: red;
+    font:bold;
+    font-size: 50px;
+}
