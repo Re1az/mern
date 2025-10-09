@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    padding: 20px ;
+    max-width: 100%;
+    background-color: #2A3342;
+    color: aliceblue;
+}
+.links{
+    display: flex;
+    gap: 50px;
+    text-decoration: none;
+    margin-top: 10px;
+    text-align: center;
+    flex-grow: 1;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+
+}
+a{
+     text-decoration: none;
+     color: #6B7787;
+     
+}
+.btn{
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+}
+.btn button{
+    padding: 10px;
+    border-radius: 5px;
+    border-style: none;
+    
+
+}
+.bck{
+    background-color:#2AD26A;
+}
+
+img{
+   display: flex;
+   height: 300px;
+   width: 500px; 
+   border-radius: 10px; 
+}
+.contents{
+    padding: 100px 30px 100px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #2A3342;
+    color: aliceblue;
+}
+.part1{
+    max-width: 500px;
+    min-width: 500px;
+    font-size: 20px;
+    flex-grow: 1;   
+}
+.part2{
+    max-width: 500px;
+    min-width: 500px;
+    font-size: 20px;  
+}
+.part1 h6{
+    background-color: #2AD26A;
+    border-radius: 20px;
+    display: inline;
+    padding: 5px;
+}
+.part1 p{
+    padding: 5px;
+    font-size: larger;
+    color: gray;
+}
+.btn2{
+    padding: 10px 0 ;
+}
+.btn2 button{
+    padding: 10px;
+    border-radius: 5px;
+    border-style: none;
+    
+    
+}
+
+
+
+
+
+
+
