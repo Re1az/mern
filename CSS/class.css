@@ -1,0 +1,36 @@
+.red {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  bottom: 0;
+  right: 0;
+}
+.blue {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  position: absolute;
+  bottom: 100px;
+  right: 100px;
+}
+.green {
+  height: 100px;
+  width: 100px;
+  background-color: green;
+  position: absolute;
+  bottom: 200px;
+  right: 200px;
+}
+.parent {
+  height: 500px;
+  width: 500px;
+  border: 1px solid black;
+  position: relative;
+}
+.child {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: black;
+}
