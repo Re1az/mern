@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent1 {
+        background-color: yellow;
+        border: 2px solid red;
+        height: 400px;
+        width: 400px;
+      }
+      .child1 {
+        background-color: blueviolet;
+        position: absolute;
+        height: 250px;
+        width: 250px;
+        z-index: 5;
+        top: 100px;
+        left: 100px;
+        border: 2px solid red;
+      }
+      .parent2 {
+        position: absolute;
+        border: 2px solid red;
+        height: 400px;
+        width: 400px;
+        background-color: gainsboro;
+        left: 150px;
+        top: 200px;
+        z-index: 2;
+      }
+      .parent3 {
+        background-color: lightgreen;
+        border: 2px solid red;
+        position: absolute;
+        height: 250px;
+        width: 250px;
+        left: 180px;
+        top: 230px;
+        z-index: 3;
+      }
+      .parent5 {
+        position: absolute;
+        border: 2px solid red;
+        height: 250px;
+        width: 250px;
+        background-color: orange;
+        z-index: 5;
+        top: 354px;
+        left: 354px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent1">
+      parent1
+      <div class="child1">parent1,position=absolute,z-index=5</div>
+      <div class="parent2">parent2</div>
+      <div class="parent3">parent3,osition=absolute,z-index=3</div>
+      <div class="parent5">parent2,position=absolute,z-index=4</div>
+    </div>
+  </body>
+</html>
