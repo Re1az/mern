@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --commonColor: blue;
+      }
+      .box {
+        height: 200px;
+        width: 200px;
+        animation: anim 3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s 5;
+      }
+      h1 {
+        color: var(--commonColor);
+      }
+      p {
+        color: var(--commonColor);
+      }
+      img {
+        height: 300px;
+        width: 300px;
+        object-fit: cover;
+        border-radius: 20px;
+        /* clip-path: circle(); */
+      }
+      .bx {
+        height: 1000px;
+        width: 500px;
+        border: 1px solid;
+        background-image: url("https://images.unsplash.com/photo-1761839258075-585182da7521?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw4fHx8ZW58MHx8fHx8");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      @keyframes anim {
+        10% {
+          background-color: aquamarine;
+        }
+        20% {
+          background-color: black;
+        }
+        40% {
+          background-color: blue;
+        }
+        60% {
+          background-color: blueviolet;
+        }
+        80% {
+          background-color: aqua;
+        }
+        100% {
+          background-color: brown;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, totam.
+    </p>
+    <img
+      src="https://images.unsplash.com/photo-1761839257469-96c78a7c2dd3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8"
+      alt=""
+    />
+    <div class="bx"></div>
+  </body>
+</html>
