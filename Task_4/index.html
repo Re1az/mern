@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+CZ:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="flex-container">
+      <h1>CSS Flexbox Cards</h1>
+      <div class="container">
+        <div class="box1">
+          <img
+            height="100px"
+            width="100px"
+            src="data:image/png;base64,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"
+            alt="angular-icon-img"
+          />
+          <h2>Angular</h2>
+          <p>
+            Angular is a platform for building mobile and desktop web
+            applications. Join the community of millions of developers who build
+            compelling user interfaces with Angular.
+          </p>
+        </div>
+        <div class="box2">
+          <img
+            height="100px"
+            width="100px"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcR5U16C8yXgBpl7-Bc7Itjx3_LRl425zINA&s"
+            alt="react-icon-img"
+          />
+          <h2>React</h2>
+          <p>
+            React is an open-source, front end, JavaScript library for building
+            user interfaces or Ul components. It is maintained by Facebook and a
+            community of individual developers and companies.
+          </p>
+        </div>
+        <div class="box3">
+          <img
+            height="85px"
+            width="85px"
+            src="data:image/png;base64,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"
+          />
+          <h2>Vue</h2>
+          <p>
+            Vue is a progressive framework for building user interfaces. Unlike
+            other monolithic frameworks, Vue is designed from the ground up to
+            be incrementally adoptable.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
