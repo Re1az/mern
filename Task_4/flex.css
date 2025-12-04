@@ -11,6 +11,7 @@
 :root {
   --primaryColor: #2ad167;
 }
+
 header {
   padding: 20px;
   display: flex;
@@ -45,19 +46,26 @@ a {
 .buttons .login {
   background: transparent;
 }
+#maincontent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .hero {
   display: flex;
   justify-content: space-between;
+  /* background-color: #2ad167; */
   padding: 20px;
   flex-wrap: wrap;
+  width: 95%;
 }
 .content {
+  width: 45%;
   display: flex;
   flex-direction: column;
   align-items: baseline;
-  height: 400px;
-  width: 400px;
-  gap: 20px;
   flex-wrap: wrap;
 }
 h1 {
@@ -68,9 +76,17 @@ h4 {
   background-color: var(--primaryColor);
   padding: 2px;
   border-radius: 10px;
+  color: aliceblue;
 }
-.image img {
+.image {
   height: 400px;
-  width: 700px;
+  width: 55%;
+
+  border-radius: 20px;
+}
+
+img {
+  height: 100%;
+  width: 90%;
   border-radius: 20px;
 }
