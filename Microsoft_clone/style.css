@@ -175,7 +175,7 @@ nav {
 }
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 10px;
 }
 .item {
@@ -487,7 +487,13 @@ footer {
   .card-grid {
     display: grid;
     /* grid-template-rows: 1fr 0.5fr; */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     /* grid-template-rows: auto auto; */
+  }
+}
+@media (max-width: 500px) {
+  .card-grid {
+    grid-template-columns: 1fr; /* single column */
+    padding: 0 10px; /* reduce side padding */
   }
 }
