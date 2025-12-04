@@ -494,6 +494,5 @@ footer {
 @media (max-width: 500px) {
   .card-grid {
     grid-template-columns: 1fr; /* single column */
-    padding: 0 10px; /* reduce side padding */
   }
 }
