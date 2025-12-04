@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .grid-container {
+      display: grid;
+      max-width: 800px;
+      background-color: antiquewhite;
+      grid-template-columns: 2fr 2fr 2frpx;
+      grid-template-rows: 200px 250px 200px;
+      padding: 20px;
+      gap: 10px;
+    }
+    .item {
+      border: 2px solid black;
+    }
+    .box1 {
+      background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST5YdFhlwPzczdbzWg1W9L0lFOaJ0XXORsnQ&s");
+      background-size: cover;
+      background-position: left;
+      grid-column: span 4;
+      border-radius: 30px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 10px;
+      overflow: hidden;
+    }
+    .right {
+      width: 300px;
+      align-self: end;
+    }
+    .box2 {
+      grid-column: span 3;
+      border-radius: 30px;
+      overflow: hidden;
+      object-fit: cover;
+      object-position: 20px 10px;
+    }
+    .box3 {
+      border-radius: 30px;
+      overflow: hidden;
+      object-fit: cover;
+      object-position: center;
+    }
+    .box4 {
+      grid-column: span 2;
+      border-radius: 30px;
+      overflow: hidden;
+      object-fit: cover;
+      object-position: center;
+    }
+    .box5 {
+      grid-column: span 2;
+      border-radius: 30px;
+      overflow: hidden;
+      object-fit: contain;
+      object-position: center;
+    }
+  </style>
+  <body>
+    <div class="grid-container">
+      <div class="item box1">
+        <h1>Strike Fast, Sip Slow</h1>
+        <div class="right">
+          <p>
+            Brewilolt is a haven for those who chase the storm but relish the
+            calm.
+          </p>
+        </div>
+      </div>
+      <div class="item box2">
+        <img
+          src="https://www.shutterstock.com/image-photo/man-cup-mug-happy-hot-600nw-2417411317.jpg"
+          alt=""
+        />
+      </div>
+      <div class="item box3">
+        <img
+          src="https://www.shutterstock.com/image-vector/little-boy-coffee-cup-steam-260nw-47731966.jpg"
+          alt=""
+        />
+      </div>
+      <div class="item box4">
+        <img
+          src="        https://img.freepik.com/premium-vector/vector-word-made-flowing-coffee-letters-with-blots-drops-splashes-blobs-glossy-typeface-text-brown-liquid-drops-isolated-white-background_263753-2846.jpg
+"
+          alt=""
+        />
+      </div>
+      <div class="item box5">
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/022/471/719/non_2x/coffee-time-hipster-vintage-stylized-lettering-illustration-cup-of-coffee-vector.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+  </body>
+</html>

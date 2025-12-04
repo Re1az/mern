@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .body {
+        padding: 20px;
+        background-color: bisque;
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: 280px 280px 280px;
+        grid-template-rows: 320px 320px;
+        gap: 40px;
+        padding: 10px;
+      }
+      .items {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding: 30px;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+
+      .items h4 {
+        display: inline-block;
+        border-radius: 50px;
+        border: 2px solid rgb(255, 254, 254);
+        padding: 3px 5px;
+      }
+      .items:nth-child(n + 4) h4 {
+        border: 1px solid blue;
+        color: #0e6aff;
+      }
+      .items:nth-child(-n + 3) a {
+        color: aliceblue;
+      }
+      .items a {
+        text-decoration: none;
+        color: black;
+      }
+      .card1 {
+        background-color: #8347f3;
+        color: white;
+      }
+      .card2 {
+        background-color: #0e6aff;
+        color: white;
+      }
+      .card3 {
+        background-color: #064797;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="items card1">
+        <div class="ban">
+          <h4>What's New</h4>
+        </div>
+
+        <h3>Our Video Conference Integrations Are Now Free-Forever</h3>
+        <p>
+          Integrate for free with Zoom, Microsoft Teams, and GoToMeeting to stay
+          connected in 2020 and beyond.
+        </p>
+        <a href="#">View more</a>
+      </div>
+      <div class="items card2">
+        <div class="ban">
+          <h4>CREATING CALENDLY</h4>
+        </div>
+
+        <h3>What working from home is really like during a pandemic</h3>
+        <p>
+          Nothing is "normal," but work and life can find balance if your
+          company supports you.
+        </p>
+        <a href="#">View more</a>
+      </div>
+      <div class="items card3">
+        <div class="ban">
+          <h4>Sales</h4>
+        </div>
+
+        <h3>
+          Convert 60% more PPC leads into bookings using Black Propeller's
+          secret weapon
+        </h3>
+        <p>
+          John Thornton of PPC agency Black Propeller explains how Calendly
+          transforms his clients campaigns.
+        </p>
+        <a href="#">View more</a>
+      </div>
+      <div class="items card4">
+        <div class="ban"><h4>sales</h4></div>
+
+        <h3>Deploying virtual appointments on your retail website</h3>
+        <p>
+          Learn what to consider when deploying virtual appointments on your
+          retail website.
+        </p>
+        <a href="#">View more</a>
+      </div>
+      <div class="items card5">
+        <div class="ban"><h4>CUSTOMER STORIES</h4></div>
+
+        <h3>Accelerated sales cycle picks up new B2B partners for Lyft</h3>
+        <p>
+          Lyft is onboarding twice the customers they did before trying
+          Calendly.
+        </p>
+        <a href="#">View more</a>
+      </div>
+      <div class="items card6">
+        <div class="ban">
+          <h4>CREATING CALENDLY</h4>
+        </div>
+
+        <h3>Motherly advice from Calendly employees</h3>
+        <p>
+          Calendlians share life lessons learned from their mother or throughout
+          their own motherhood journey.
+        </p>
+        <a href="#">View more</a>
+      </div>
+    </div>
+  </body>
+</html>

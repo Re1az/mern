@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      :root {
+        --color1: #6dbf4f;
+        --color2: #ec3337;
+        --color3: #fbb230;
+      }
+      body {
+        padding: 20px;
+        background-color: #2c2e56;
+      }
+      .grid-box {
+        display: grid;
+        max-width: 800px;
+        /* border: 1px solid black;
+        background-color: antiquewhite; */
+        grid-template-columns: 300px 300px 300px 300px;
+        grid-template-rows: 200px 200px 200px;
+        gap: 20px;
+      }
+      .item {
+        border: 2px solid black;
+      }
+      .box1 {
+        background-color: var(--color1);
+        grid-row: span 3;
+      }
+      .box2 {
+        background-color: var(--color1);
+        grid-column: span 2;
+      }
+      .box3 {
+        background-color: var(--color2);
+      }
+      .box4 {
+        background-color: var(--color3);
+      }
+      .box5 {
+        background-color: var(--color2);
+      }
+      .box6 {
+        background-color: var(--color1);
+        grid-row: span 2;
+      }
+      .box7 {
+        background-color: var(--color2);
+      }
+      .box8 {
+        background-color: var(--color3);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-box">
+      <div class="item box1"></div>
+      <div class="item box2"></div>
+      <div class="item box3"></div>
+      <div class="item box4"></div>
+      <div class="item box5"></div>
+      <div class="item box6"></div>
+      <div class="item box7"></div>
+      <div class="item box8"></div>
+    </div>
+  </body>
+</html>
