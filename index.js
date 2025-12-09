@@ -6,27 +6,27 @@ var b = 20;
 //reasigning var value
 b = 30;
 //int can be changed into string
-// a = "Ram";
-// var result = a + b;
-// console.log(result);
+a = "Ram";
+var result = a + b;
+console.log(result);
 
 //constant
-// const firstName = "Ram";
-// const name = "Ram";
-// const type = " is a Good Boy";
+const firstName = "Ram";
+const nme = "Ram";
+const type = " is a Good Boy";
 
-// console.log(name.concat(type));
+console.log(nme.concat(type));
 
-// const name = "Ram";
-// const type = "Good Boy";
+const perName = "Ram";
+const behave = "Good Boy";
 
-// console.log(name.concat(" is a ", type));
+console.log(perName.concat(" is a ", behave));
 
-// const lastName = "Yadav";
-// let pname = "hari";
+const lastName = "Yadav";
+let pname = "hari";
 
-// console.log(pname.slice(2, 4));
-// console.log(firstName + " " + lastName);
+console.log(pname.slice(2, 4));
+console.log(firstName + " " + lastName);
 
 const name = "Asha";
 const age = 27;
@@ -45,6 +45,20 @@ const pasta = "pasta";
 console.log(`The temperature is ${temperature}C`);
 console.log(`${value} plus ${value} makes ${value + value}`);
 console.log(`I like ${pizza} and ${pasta}`);
+
+//object and function in object
+const person = {
+  pname: "Ram",
+  age: 22,
+  greet: function () {
+    console.log(`Hello ${this.pname} your age is ${this.age}`);
+  },
+};
+//call object
+person.greet();
+
+const rand = Math.floor(Math.random() * 40);
+console.log(rand);
 
 //Data types
 
