@@ -1,30 +1,66 @@
-// const personName = 'Remo'
-// const age = 90;
-// const greet = 'hi how are you!'
+//Introducing javascript
 
-// console.log(`${personName} ${age} ${greet}`);
+//  variables
+var a = 10;
+var b = 20;
+//reasigning var value
+b = 30;
+//int can be changed into string
+// a = "Ram";
+// var result = a + b;
+// console.log(result);
 
-// console.log(greet.charAt(1));
-// console.log(greet.includes('h'));
-// console.log(greet.indexOf('h'));
-// console.log(greet.trim().length);
-// console.log(greet.replace('hi' , 'hello'));
-// console.log(greet.replaceAll('hi', 'hello'));
-// console.log(greet.substring(0, 2));
-// const netsalary = 100000;
-// const netexpenses = 50000;
-// if (netsalary > netexpenses) {
-//     console.log{ `you have saved `.$(netsalary - netexpenses) };
+//constant
+// const firstName = "Ram";
+// const name = "Ram";
+// const type = " is a Good Boy";
 
-//  }
+// console.log(name.concat(type));
 
-//mutable , imutable
-const per = 'laxman'
-per[0]='k' //imutable
-console.log(per)
+// const name = "Ram";
+// const type = "Good Boy";
 
-const person = ['hari', 'ram', 'shyam']
-person[0]='gita' //mutable
-console.log(person);
+// console.log(name.concat(" is a ", type));
+
+// const lastName = "Yadav";
+// let pname = "hari";
+
+// console.log(pname.slice(2, 4));
+// console.log(firstName + " " + lastName);
+
+const name = "Asha";
+const age = 27;
+let res = `${name} is ${age} years old.`;
+console.log(res);
+
+const x = 5,
+  y = 3;
+console.log(`${x} + ${y} = ${x + y}`);
+
+const temperature = 20;
+const value = 2;
+const pizza = "pizza";
+const pasta = "pasta";
+
+console.log(`The temperature is ${temperature}C`);
+console.log(`${value} plus ${value} makes ${value + value}`);
+console.log(`I like ${pizza} and ${pasta}`);
+
+//Data types
+
+//primitive data type
+/*
+String
+Number
+Boolean
+nullundefine
+* /
 
 
+//reference type
+/*
+Array
+object
+function
+
+*/
