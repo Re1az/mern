@@ -29,8 +29,8 @@ console.log(pname.slice(2, 4));
 console.log(firstName + " " + lastName);
 
 const name = "Asha";
-const age = 27;
-let res = `${name} is ${age} years old.`;
+const agee = 27;
+let res = `${name} is ${agee} years old.`;
 console.log(res);
 
 const x = 5,
@@ -59,6 +59,54 @@ person.greet();
 
 const rand = Math.floor(Math.random() * 40);
 console.log(rand);
+
+const num1 = 20;
+const num2 = 50;
+
+const add = num1 + num2;
+console.log(`The addition is ${add}`);
+
+// console.log(age < 20 ? "junior" : age > 20 ? "senior" : "regular");
+// const age = 80;
+// if (age < 20) {
+//   console.log("junior");
+// } else if (age > 50) {
+//   console.log("senior");
+// } else {
+//   console.log("regular");
+// }
+
+// Define two integer variables called netSalary and .
+const netSalary = 1000;
+const expenses = 100;
+
+if (netSalary > expenses) {
+  console.log(`You have saved ${netSalary - expenses} this month`);
+} else if (expenses > netSalary) {
+  console.log(`You have lost ${expenses - netSalary} this month `);
+} else {
+  console.log(` Your balance hasn't changed`);
+}
+
+const number1 = 100;
+const number2 = 100;
+const calc = "add";
+
+switch (calc) {
+  case "add":
+    console.log(`${number1}+${number2}=${number1 + number2}`);
+    break;
+  case "sub":
+    console.log(`${number1}-${number2}=${number1 - number2}`);
+    break;
+  case "mul":
+    console.log(`${number1}*${number2}=${number1 * number2}`);
+    break;
+  default:
+    console.log(`error occured!!!`);
+}
+
+// Then verify that the program works correctly for different values of netSalary and expenses.
 
 //Data types
 
