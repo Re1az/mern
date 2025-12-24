@@ -1,11 +1,14 @@
 export default function App() {
-  const name = "ram";
-  const age = 90;
+  const city = "kathmandu";
+  const population = 1000000;
+
+  const firstName = "Ram";
+  const lastName = "Gupta";
 
   return (
     <div>
-      <h1>Hello World!!!</h1>
-      <p>{`Hello my name is ${name} and I am ${age} years old.`}</p>
+      <p>{`The population of ${city} is ${population}`}</p>
+      <p>{` ${firstName}  ${lastName}`}</p>
     </div>
   );
 }
