@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">please fill up for survey data.</p>
+    <form action="POST" id="survey-form">
+      <label for="name-label" id="name-label">Name:</label>
+      <input
+        required
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Jane Doe"
+      />
+
+      <label for="email-label" id="email-label">Email:</label>
+      <input
+        required
+        type="email"
+        id="email"
+        name="email"
+        placeholder="abc@gamil.com"
+      />
+
+      <label for="number-label" id="number-label">Number</label>
+      <input
+        required
+        type="number"
+        name="number"
+        id="number"
+        min="10"
+        max="10"
+        placeholder="9000000000"
+      />
+
+      <select name="currency" id="dropdown">
+        <option value="rupee">NRP</option>
+        <option value="dollars">USD</option>
+      </select>
+
+      <input type="radio" name="gender" id="male" value="male" />
+      <label for="male">Male</label>
+      <input type="radio" name="gender" id="female" value="female" />
+      <label for="female">Female</label>
+
+      <input type="checkbox" name="married-status" value="married" />
+      <label for="married">Married</label>
+      <input checked type="checkbox" name="married-status" value="un-married" />
+      <label for="un-married">Un-Married</label>
+
+      <label for="comment">Additional Comment</label>
+      <textarea id="comment" name="comment" cols="5" rows="10"></textarea>
+
+      <button type="submit" id="submit">Submit</button>
+    </form>
+  </body>
+</html>
