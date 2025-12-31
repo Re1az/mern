@@ -1,31 +1,42 @@
 import React from "react";
 import NavBar from "./components/NavBar";
 import FelxibleCard from "./components/FelxibleCard";
-import { HiDesktopComputer } from "react-icons/hi";
+import { HiMiniComputerDesktop } from "react-icons/hi2";
 import { FaCss3 } from "react-icons/fa";
-import { GoRuby } from "react-icons/go";
+import { MdOutlineDiamond } from "react-icons/md";
+import ColorClass from "./components/ColorClass";
+import Resize from "./components/Resize";
+import Container from "./components/Container";
 
 export default function App() {
   return (
     <div>
       <NavBar />
-      <div
-        className="grid grid-cols-1 sm:grid-cols-2 
-                      lg:grid-cols-3 "
-      >
+      <div className="grid grid-cols-3 p-10 ">
         <FelxibleCard
           title={"Responsive"}
-          icon={<HiDesktopComputer size={100} color="#333" />}
+          icon={
+            <i>
+              <HiMiniComputerDesktop size={150} />
+            </i>
+          }
           discription={[
             "Built-in responsiveness",
+
             "Mobile first fluid grid",
+
             "Fits any screen sizes",
+
             "PC Tablet and Mobile",
           ]}
         />
         <FelxibleCard
-          title={"Standard CSS"}
-          icon={<FaCss3 size={100} color="#333" />}
+          title={"CSS Standard"}
+          icon={
+            <i>
+              <FaCss3 size={150} />
+            </i>
+          }
           discription={[
             "Standard CSS only",
 
@@ -37,8 +48,12 @@ export default function App() {
           ]}
         />
         <FelxibleCard
-          title={"Responsive"}
-          icon={<GoRuby size={100} color="#333" />}
+          title={"Design"}
+          icon={
+            <i>
+              <MdOutlineDiamond size={150} />
+            </i>
+          }
           discription={[
             "Paper like design",
 
@@ -50,6 +65,10 @@ export default function App() {
           ]}
         />
       </div>
+      <ColorClass />
+
+      <Resize />
+      <Container />
     </div>
   );
 }
