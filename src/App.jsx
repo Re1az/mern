@@ -7,6 +7,9 @@ import { MdOutlineDiamond } from "react-icons/md";
 import ColorClass from "./components/ColorClass";
 import Resize from "./components/Resize";
 import Container from "./components/Container";
+import Card from "./components/Card";
+import Map from "./components/Map";
+import Movie from "./components/Movie";
 
 export default function App() {
   return (
@@ -69,6 +72,9 @@ export default function App() {
 
       <Resize />
       <Container />
+      <Card />
+      <Map />
+      <Movie />
     </div>
   );
 }
