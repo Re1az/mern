@@ -1,32 +1,52 @@
-export default function App() {
-  return (
-    <div>
-      <Child
-        name={"ram"}
-        age={90}
-        address={{
-          city: "bangalore",
-          state: "karnataka",
-        }}
-        jobs={["developer", "tester"]}
-      />
-    </div>
-  );
-}
+import { useState } from "react";
+import { Button } from "./components/ui/button";
+import { faker } from "@faker-js/faker";
 
-function Child({ name, age, address, jobs }) {
+export default function App() {
+  const [data, setData] = useState([]);
+
+  const handleData = () => {
+    const newItems = faker.food.dish();
+
+    setData((prev) => {
+      return [prev, newItems];
+    });
+  };
+
+  const [count, setCount] = useState(0);
+
+  const handleIncrement = () => {
+    setCount((prev) => prev + 1);
+  };
+  const handleDecrement = () => {
+    setCount((prev) => {
+      return prev === 0 ? prev : prev - 1;
+    });
+  };
+
   return (
-    <div>
-      <h1>{name}</h1>
-      <h2>{age}</h2>
-      <h3>{address.city}</h3>
-      <h3>{address.state}</h3>
-      <h4>
-        {" "}
-        {jobs.map((item) => {
-          return <li key={item.id}>{item}</li>;
-        })}
-      </h4>
+    <div className="p-5">
+      {data.map((items, index) => {
+        return (
+          <ul key={index}>
+            <li className="decoration-none">{items}</li>
+          </ul>
+        );
+      })}
+
+      <Button onClick={handleData} size="lg">
+        hello
+      </Button>
+
+      <h1>
+        {count}
+
+        {count % 2 === 0 ? "even" : "odd"}
+      </h1>
+      <button onClick={handleIncrement}>Increment</button>
+      <button className="p-10" onClick={handleDecrement}>
+        Decremental
+      </button>
     </div>
   );
 }
