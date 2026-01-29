@@ -1,52 +1,40 @@
-import { useState } from "react";
-import { Button } from "./components/ui/button";
-import { faker } from "@faker-js/faker";
+import { createBrowserRouter, RouterProvider } from "react-router";
+import Home from "./pages/home/Home";
+import NotFound from "./pages/not-found/NotFound";
+import MealList from "./pages/Meals/MealList.jsx";
+import Rootlayout from "./components/Rootlayout";
+import Mealdetails from "./pages/Meals/Mealdetails";
+import SearchMeal from "./pages/Meals/SearchMeal";
 
 export default function App() {
-  const [data, setData] = useState([]);
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Rootlayout />,
+      children: [
+        {
+          index: true,
+          element: <Home />,
+        },
+        {
+          path: "meal-list/:category",
+          element: <MealList />,
+        },
+        {
+          path: "meal-details/:id",
+          element: <Mealdetails />,
+        },
+        {
+          path: "meal-search",
+          element: <SearchMeal />,
+        },
+        {
+          path: "*",
+          element: <NotFound />,
+        },
+      ],
+    },
+  ]);
 
-  const handleData = () => {
-    const newItems = faker.food.dish();
-
-    setData((prev) => {
-      return [prev, newItems];
-    });
-  };
-
-  const [count, setCount] = useState(0);
-
-  const handleIncrement = () => {
-    setCount((prev) => prev + 1);
-  };
-  const handleDecrement = () => {
-    setCount((prev) => {
-      return prev === 0 ? prev : prev - 1;
-    });
-  };
-
-  return (
-    <div className="p-5">
-      {data.map((items, index) => {
-        return (
-          <ul key={index}>
-            <li className="decoration-none">{items}</li>
-          </ul>
-        );
-      })}
-
-      <Button onClick={handleData} size="lg">
-        hello
-      </Button>
-
-      <h1>
-        {count}
-
-        {count % 2 === 0 ? "even" : "odd"}
-      </h1>
-      <button onClick={handleIncrement}>Increment</button>
-      <button className="p-10" onClick={handleDecrement}>
-        Decremental
-      </button>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
