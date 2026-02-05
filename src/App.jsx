@@ -1,12 +1,18 @@
 import { createBrowserRouter, RouterProvider } from "react-router";
 import Home from "./pages/home/Home";
 import NotFound from "./pages/not-found/NotFound";
-import MealList from "./pages/Meals/MealList.jsx";
 import Rootlayout from "./components/Rootlayout";
-import Mealdetails from "./pages/Meals/Mealdetails";
-import SearchMeal from "./pages/Meals/SearchMeal";
+
+import Form from "./components/form";
+import TodoAddForm from "./todo/TodoAddForm";
+import TodoUpdateForm from "./todo/TodoUpdateForm";
 
 export default function App() {
+  const data = [
+    { id: 1, name: "ram" },
+    { id: 2, name: "shyam" },
+  ];
+
   const router = createBrowserRouter([
     {
       path: "/",
@@ -17,16 +23,16 @@ export default function App() {
           element: <Home />,
         },
         {
-          path: "meal-list/:category",
-          element: <MealList />,
+          path: "form",
+          element: <Form />,
         },
         {
-          path: "meal-details/:id",
-          element: <Mealdetails />,
+          path: "add-todo",
+          element: <TodoAddForm />,
         },
         {
-          path: "meal-search",
-          element: <SearchMeal />,
+          path: "update-todos/:id",
+          element: <TodoUpdateForm />,
         },
         {
           path: "*",

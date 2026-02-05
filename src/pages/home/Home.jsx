@@ -1,38 +1,29 @@
-import { Input } from "@/components/ui/input.jsx";
-import CategoryMeal from "../Meals/CategoryMeal.jsx";
-import { useNavigate } from "react-router";
-import { useActionState } from "react";
+import DeleteTodo from "@/todo/DeleteTodo";
+import { todoSlice } from "@/todo/todoSlice";
+import { Edit } from "lucide-react";
+import React from "react";
+import { useSelector } from "react-redux";
 
 export default function Home() {
-  const nav = useNavigate();
-  const handleForm = (prevstate, formData) => {
-    const search = formData.get("search");
-    if (!search) return;
-    nav(`/meal-search?s=${search}`);
-  };
+  console.log(todoSlice);
 
-  const [state, action] = useActionState(handleForm, null);
+  const { todos } = useSelector((state) => state.todoSlice);
+  console.log(todos);
   return (
-    <div className="text-white px-14">
-      <div className="flex items-center">
-        <img src="https://www.themealdb.com/images/meal-icon.png" alt="" />
-        <div className="text-center space-y-4">
-          <h1 className="text-4xl ">Welcome to TheMealDB</h1>
-          <p>
-            Welcome to TheMealDB: An open, crowd-sourced database of recipes
-            from around the world. We offer a free recipe API for anyone wanting
-            to use it, with additional premium features if required.
-          </p>
-        </div>
-        <img src="https://www.themealdb.com/images/meal-icon.png" alt="" />
-      </div>
-      <hr />
-      <form action={action} className="max-w-sm mt-5 mb-5 m-auto text-white">
-        <Input placeholder="Search for meal" name="search" />
-      </form>
-      <hr />
-
-      <CategoryMeal />
+    <div>
+      {todos.map((todo) => {
+        return (
+          <div key={todo.id}>
+            <h1>{todo.title}</h1>
+            <p>{todo.gender}</p>
+            <p>{todo.age}</p>
+            <div>
+              <Edit />
+              <DeleteTodo id={todo.id} />
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }

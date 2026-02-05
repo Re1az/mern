@@ -9,7 +9,7 @@
   }
 
   body {
-    @apply bg-[#1E1B17] text-foreground;
+    @apply bg-[#ffff] text-foreground;
   }
 
   h1 {
