@@ -1,5 +1,65 @@
-import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router";
+import RootLayout from "./components/RootLayout.jsx";
+import Home from "./features/Home/Home.jsx";
+import Login from "./features/auth/login.jsx";
+import Register from "./features/auth/register.jsx";
+import UserProfile from "./features/user/UserProfile.jsx";
+import AdminPage from "./features/admin/AdminPage.jsx";
+import Add from "./features/admin/form/Add.jsx";
+import Delete from "./features/admin/form/Edit.jsx";
+import Edit from "./features/admin/form/Edit.jsx";
+import ProductDetail from "./features/products/ProductDetails.jsx";
+import CartPage from "./features/cart/CartPage.jsx";
+import OrderPage from "./features/order/OrderPage.jsx";
 
 export default function App() {
-  return <div>App</div>;
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <RootLayout />,
+      children: [
+        {
+          index: true,
+          element: <Home />,
+        },
+        {
+          path: "login",
+          element: <Login />,
+        },
+        {
+          path: "register",
+          element: <Register />,
+        },
+        {
+          path: "profile",
+          element: <UserProfile />,
+        },
+        {
+          path: "admin",
+          element: <AdminPage />,
+        },
+        {
+          path: "admin/form/add",
+          element: <Add />,
+        },
+        {
+          path: "admin/form/edit/:id",
+          element: <Edit />,
+        },
+        {
+          path: "product/:id",
+          element: <ProductDetail />,
+        },
+        {
+          path: "cart",
+          element: <CartPage />,
+        },
+        {
+          path: "orders",
+          element: <OrderPage />,
+        },
+      ],
+    },
+  ]);
+  return <RouterProvider router={router} />;
 }
